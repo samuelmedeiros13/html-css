@@ -1,0 +1,74 @@
+HTML
+
+Título: <h1> </h1> ... H6
+Parágrafo: <p>parágrafo</p>
+Sinal de maior e menor (uso de tag sem afetar): &lt; &gt;
+Linha: <hr> 
+Quebra de linha: <br>
+Comentário: <!-- -->
+Símbolos: &reg;
+Emojis: &#xcódigo
+Imagem: <img>
+
+Emojipedia 
+
+Imagens: para fundo 1200, durante o site 650 em média 
+Logos: entre 400 a 200 em média 
+
+Favicon.io
+Adicionar favicon: link:favicon
+
+Hierarquia de títulos: h1 até h6
+
+<address> texto em destaque 
+
+Html: significado, semântica 
+CSS: estilo, forma 
+
+Destaque: <strong>
+Ênfase: <em>
+Marcado: <mark>
+Texto pequeno: <small>
+Excluído: <del> 
+Inserido: <ins>
+Sobrescrito: <sup>
+Subscrito: <sub>
+
+Organizar o código: <pre>
+<code>
+
+Citação: <q>
+Citação completa: <blockquote cite=" ">
+Mostrar uma descrição com o mouse na frase - abreviações: <abbr>
+Texto invertido: <bdo : r
+
+Listas ordenadas: <ol> ou <ol type=" " com 1 A a I i
+Listas não ordenadas: <ul> ou <ul type=" " com disc circle square 
+Itens: <li>
+Lista definição: <dl>
+<dt> título 
+<dd> definição
+Adicionar link: <a href=" ">
+Link externo: <a href=" " target=" " rel=" ">
+Para página externa: target="_blank"
+Para a própria página: target="_self"
+Página externa: rel="external" ou "nofollow"
+Próxima página: rel="next"
+Página anterior: rel="prev"
+Volta a um link fora da pasta: "../"
+
+Download:<a href=" " download=" " type=" "> </a>
+
+Adicionar imagens
+Imagens flexíveis: <picture>
+Source media="(max-width: )" srcset="nome do arquivo" type="image/png">
+<Img>
+
+Adicionar áudios: <audio preload="metadata" autoplay controla>
+<source src="nome do arquivo" type="audio/mpeg"
+Formatos: mp3, ogg, wav
+
+Vídeos em hospedagem própria 
+Alto consumo de tráfico de dados
+<Video width="tamanho" poster="imagem inicial" controls>
+   <source src="arquivo" type="video/mp4" ou webm, ogg

@@ -1,0 +1,3 @@
+Espaçamento no inicio do paragrafo - text-indent
+variáveis em CSS - :root {}
+exemplo - --cor0: ;

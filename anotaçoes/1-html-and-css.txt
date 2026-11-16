@@ -1,0 +1,36 @@
+Repositório público 
+Github.com/gustavoguanabara 
+Gustavoguanabara.github.io
+
+UTF-8 ?
+
+HTML = conteúdo 
+CSS = design
+JS = interações 
+
+HTML
+<h1> título </h1>
+<p> parágrafo </p>
+<img src="foto.png" alt="foto">
+
+CSS
+h1 {
+       font-family: Arial;
+       font-size: 20pt;
+       color: blue;
+     }
+
+Estrutura básica HTML
+<!DOCTYPE html>
+<html lang="pt-br">
+      <head>
+               <meta charset="UTF-8">
+               <meta name="width=device-width,initial-scale=1.0">
+               <title>Document</title>
+      </head>
+      <body>
+               <h1>Olá, mundo!</h1>
+      </body>
+</html>
+
+Front-end + Back-end = Full stack

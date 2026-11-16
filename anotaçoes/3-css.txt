@@ -1,0 +1,122 @@
+CSS
+
+estilo inline: todo o estilo é feito na mesma linha
+ex: <h1 style="color: ;
+
+estilo locais: todo o estilo em um grupo
+style dentro do head
+ex: body {
+	background-color: ;
+	font-family: ;
+	font-size: ;
+
+estilo externo: todo o estilo em uma página diferente 
+link:css dentro do head
+pode ser feito várias páginas 
+
+Cores
+*{/* Configuração global das CSS */
+   height: 100%;
+}
+Gradiente: background-image: linear-gradiente(to bottom, White, blue);
+background-attachment: fixed;
+
+Bordas: border-radius: 10px;
+sombras: box-shadow: 5px 5px 15px black;
+Espaçamento nas bordas: padding: 10px;
+margin: auto;
+
+font-size
+Medidas absolutas: cm, mm, in, "px", pt, pc
+Medidas relativas: "em", ex, rem, vw, vh, %
+16px geralmente = 1em
+
+Peso da fonte: nem sempre a forte permite essas configurações
+font-weight: lighter normal bold bolder;
+font-style: italic etc;
+text-decoration: underline;
+
+Shorthand font: font-style -> font-weight -> font-size -> font-family
+font: italic bolder 3em 'Work Sans', sans-serif;
+
+fontes baixadas
+@font-face {
+	font-family: ;
+	src: url('') format('');
+font-weight: normal;
+font-style: normal;
+
+Tipos de formatos
+opentype (otf)
+truetype (ttf)
+embedded-opentype
+truetype-aat (Apple Advanced Typography)
+sgv
+
+Alinhamento de texto
+text-align: left, center, right;
+text-indent: 30px;
+
+intentificadores
+h1 id="nome" - h1#nome {}
+h1 id="nome" class="nome"
+h1 class="nome" - h1.nome {} 
+h1 class="nome nome"
+em HTML é id = CSS é #
+em HTML é class = CSS é .
+id pode usar apenas uma por paginas
+class pode usar varias
+
+border: 1px solid black;
+height = altura
+widgh = largura 
+display: inline-block; = deixar tudo alinhado
+display: nome = esconder
+	 block = mostrar
+
+pseudo-classes
+<div> </div>
+div id="nome" = pode usar varias
+HTML div = CSS :
+div:houver {} = quando passar o mouse 
+div > p {} = uma div com um conteúdo dentro
+div:visited
+div:active
+.especial::before {content: '⏭︎'} = modificar div
+	   after
+
+Tipos de caixas
+Box-level: criar uma caixa nova na linha de baixo
+Inline-level: cria uma caixa na mesma linha
+Box-level: div, h1, p, main, header, nav, article, aside, footer, from, vídeo.
+Inline-level: span, a, code, small, Strong, em, sup, label, button, input, select.
+
+border-width, style, color:
+border: 5px solid black;
+
+padding-top, right, bottom, left:
+padding: 5px 5px 5px 5px; - pode usar 1, 2 ou 4 valores
+
+margin-top, right, bottom, left, auto:
+margin: 10px 10px 5px 10px;
+
+outline-width, style, color:
+outline: 5px dashed salmon;
+
+header - cabeçario 
+nav - menu
+a
+
+main - conteúdo principal
+section id='assuntos' - seção 
+article - artigo
+aside - sub artigo 
+
+
+footer - rodapé 
+
+section id='assuntos' - seção 
+article
+
+sombra - box-shadow: 1px 1px 1px 1px black;
+

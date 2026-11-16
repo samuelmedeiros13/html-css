@@ -1,0 +1,1272 @@
+# HTML5 E CSS3 — ANOTAÇÕES DE ESTUDO
+
+==================================================
+PARTE 1 — HTML5
+==================================================
+
+HTML = Linguagem de marcação responsável pela estrutura e pelo significado do conteúdo de um site.
+
+CSS = Linguagem responsável pela aparência e estilização do site.
+
+--------------------------------------------------
+1. TAGS BÁSICAS DE TEXTO
+--------------------------------------------------
+
+<h1> até <h6> = Títulos e subtítulos.
+- h1: título principal.
+- h2: título de seção.
+- h3: subtítulo.
+- h4 até h6: níveis menores de subdivisão.
+
+<p> = Criar parágrafos.
+<hr> = Linha divisória temática.
+<br> = Quebra de linha.
+<!-- --> = Comentário no código.
+<address> = Informações de contato.
+
+IMPORTANTE:
+Utilize os títulos conforme a hierarquia do conteúdo, não apenas pelo tamanho visual.
+
+--------------------------------------------------
+2. CARACTERES ESPECIAIS E EMOJIS
+--------------------------------------------------
+
+&lt; = <
+&gt; = >
+&amp; = &
+&nbsp; = Espaço não separável.
+&reg; = ®
+&copy; = ©
+&euro; = €
+
+Emojis:
+Podem ser inseridos diretamente ou por códigos numéricos.
+
+Exemplo:
+&#x1F600;
+
+Site de emojis:
+https://emojipedia.org/
+
+--------------------------------------------------
+3. FORMATAÇÃO E SEMÂNTICA DE TEXTO
+--------------------------------------------------
+
+<strong> = Texto importante (geralmente negrito).
+<em> = Ênfase (geralmente itálico).
+<mark> = Texto destacado.
+<small> = Texto secundário ou menor.
+<del> = Texto removido ou excluído.
+<ins> = Texto inserido.
+<sup> = Texto sobrescrito.
+<sub> = Texto subscrito.
+
+Exemplos:
+
+<strong>Texto importante</strong>
+<em>Texto enfatizado</em>
+<mark>Texto destacado</mark>
+H<sub>2</sub>O
+X<sup>2</sup>
+
+--------------------------------------------------
+4. CÓDIGOS, CITAÇÕES E ABREVIAÇÕES
+--------------------------------------------------
+
+<pre> = Preserva espaços e quebras de linha.
+<code> = Identifica trechos de código.
+<q> = Citação curta.
+<blockquote> = Citação em bloco.
+<abbr> = Abreviação com explicação.
+<bdo> = Altera a direção de leitura.
+
+Exemplos:
+
+<pre>
+  Texto
+    com espaços
+      preservados
+</pre>
+
+<code>console.log("Olá");</code>
+
+<q>Conhecimento é poder.</q>
+
+<blockquote cite="https://exemplo.com">
+  Uma citação mais longa.
+</blockquote>
+
+<abbr title="HyperText Markup Language">
+  HTML
+</abbr>
+
+<bdo dir="rtl">Texto invertido</bdo>
+
+--------------------------------------------------
+5. LISTAS
+--------------------------------------------------
+
+LISTA ORDENADA:
+
+<ol>
+    <li>Primeiro item</li>
+    <li>Segundo item</li>
+</ol>
+
+Tipos de numeração:
+1 = Números.
+A = Letras maiúsculas.
+a = Letras minúsculas.
+I = Algarismos romanos maiúsculos.
+i = Algarismos romanos minúsculos.
+
+Exemplo:
+
+<ol type="A">
+    <li>Item A</li>
+    <li>Item B</li>
+</ol>
+
+LISTA NÃO ORDENADA:
+
+<ul>
+    <li>Maçã</li>
+    <li>Banana</li>
+    <li>Laranja</li>
+</ul>
+
+Tipos de marcadores tradicionais:
+disc = Círculo preenchido.
+circle = Círculo vazio.
+square = Quadrado.
+
+LISTA DE DEFINIÇÕES:
+
+<dl> = Lista de definições.
+<dt> = Termo ou título.
+<dd> = Descrição do termo.
+
+Exemplo:
+
+<dl>
+    <dt>HTML</dt>
+    <dd>Linguagem de marcação.</dd>
+
+    <dt>CSS</dt>
+    <dd>Linguagem de estilização.</dd>
+</dl>
+
+--------------------------------------------------
+6. LINKS E NAVEGAÇÃO
+--------------------------------------------------
+
+<a href="https://exemplo.com">Acessar site</a>
+
+Principais atributos:
+
+href = Endereço do destino.
+target="_blank" = Abre em uma nova aba.
+target="_self" = Abre na mesma aba.
+rel="external" = Indica link externo.
+rel="nofollow" = Indica que não se recomenda transmitir endosso ao destino.
+rel="next" = Indica próxima página.
+rel="prev" = Indica página anterior.
+
+Exemplo de link externo:
+
+<a href="https://exemplo.com"
+   target="_blank"
+   rel="noopener noreferrer">
+   Abrir site
+</a>
+
+NAVEGAÇÃO ENTRE PASTAS:
+
+../ = Voltar um nível na estrutura de pastas.
+
+Exemplo:
+
+<a href="../index.html">Voltar</a>
+
+DOWNLOAD:
+
+<a href="arquivo.pdf"
+   download="meu-arquivo.pdf"
+   type="application/pdf">
+   Baixar arquivo
+</a>
+
+--------------------------------------------------
+7. IMAGENS
+--------------------------------------------------
+
+TAG PRINCIPAL:
+
+<img src="imagem.jpg" alt="Descrição da imagem">
+
+Principais atributos:
+
+src = Caminho da imagem.
+alt = Descrição alternativa.
+width = Largura.
+height = Altura.
+
+IMAGENS FLEXÍVEIS:
+
+Utilizamos <picture> para carregar imagens diferentes dependendo do tamanho da tela.
+
+Exemplo:
+
+<picture>
+    <source media="(max-width: 750px)"
+            srcset="imagem-pequena.png"
+            type="image/png">
+
+    <img src="imagem-grande.png"
+         alt="Descrição da imagem">
+</picture>
+
+TAMANHOS DE IMAGENS — REFERÊNCIAS:
+
+Imagem de fundo = 1200 px ou mais.
+Imagem no conteúdo = aproximadamente 650 px.
+Logotipos = aproximadamente 200 a 400 px.
+
+As medidas dependem do projeto e da resolução desejada.
+
+FAVICON:
+
+É o pequeno ícone exibido na aba do navegador.
+
+Site:
+https://favicon.io/
+
+Adicionar dentro do <head>:
+
+<link rel="icon"
+      type="image/png"
+      href="favicon.png">
+
+--------------------------------------------------
+8. ÁUDIOS
+--------------------------------------------------
+
+TAG PRINCIPAL: <audio>
+
+Exemplo:
+
+<audio controls preload="metadata">
+    <source src="musica.mp3" type="audio/mpeg">
+    <source src="musica.ogg" type="audio/ogg">
+    Seu navegador não suporta áudio.
+</audio>
+
+Atributos:
+
+controls = Mostra os controles.
+autoplay = Tenta iniciar automaticamente.
+preload="none" = Não pré-carrega o áudio.
+preload="metadata" = Carrega informações básicas.
+preload="auto" = Permite pré-carregamento.
+
+Formatos comuns:
+MP3, OGG e WAV.
+
+--------------------------------------------------
+9. VÍDEOS
+--------------------------------------------------
+
+VÍDEOS HOSPEDADOS NO PRÓPRIO SERVIDOR:
+
+Exemplo:
+
+<video width="600"
+       poster="imagem-inicial.jpg"
+       controls
+       preload="metadata">
+
+    <source src="video.mp4" type="video/mp4">
+    <source src="video.webm" type="video/webm">
+
+    Seu navegador não suporta vídeo.
+</video>
+
+Atributos:
+
+width = Largura.
+poster = Imagem exibida antes da reprodução.
+controls = Mostra os controles.
+autoplay = Tenta iniciar automaticamente.
+loop = Reproduz em repetição.
+muted = Inicia sem som.
+preload = Controla o pré-carregamento.
+
+ATENÇÃO:
+Vídeos hospedados no próprio site podem consumir bastante tráfego de dados e armazenamento.
+
+Para vídeos externos, podemos utilizar plataformas de hospedagem e incorporar o conteúdo com <iframe>.
+
+VÍDEOS DO YOUTUBE COM IFRAME:
+
+O <iframe> permite incorporar conteúdo de outra página, como um vídeo hospedado no YouTube.
+
+No YouTube:
+1. Abra o vídeo desejado.
+2. Clique em Compartilhar.
+3. Escolha Incorporar.
+4. Copie o código <iframe> fornecido e coloque-o no HTML.
+
+Exemplo básico:
+
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/ID_DO_VIDEO"
+    title="Vídeo do YouTube"
+    allowfullscreen>
+</iframe>
+
+Para controlar o tamanho e manter o vídeo proporcional, podemos criar um contêiner.
+
+HTML:
+
+<div class="video">
+    <iframe
+        src="https://www.youtube.com/embed/ID_DO_VIDEO"
+        title="Vídeo do YouTube"
+        allowfullscreen>
+    </iframe>
+</div>
+
+CSS — contêiner responsivo:
+
+.video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.video iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    border: 0;
+}
+
+EXPLICAÇÃO:
+- position: relative; define o contêiner como referência para o posicionamento do iframe.
+- position: absolute; permite posicionar o iframe em relação ao contêiner.
+- top: 5%; e left: 5%; definem o afastamento superior e esquerdo.
+- width: 90%; e height: 90%; definem as dimensões do iframe em relação ao contêiner.
+- aspect-ratio: 16 / 9; mantém a proporção widescreen do contêiner.
+
+OBSERVAÇÃO:
+O exemplo acima deixa uma margem interna de 5% ao redor do iframe. Se quiser que o vídeo ocupe todo o contêiner, utilize top: 0; left: 0; width: 100%; height: 100%.
+O endereço usado em src deve ser o endereço de incorporação do YouTube, normalmente no formato https://www.youtube.com/embed/ID_DO_VIDEO.
+
+--------------------------------------------------
+10. ESTRUTURA SEMÂNTICA DO HTML5
+--------------------------------------------------
+
+<header> = Cabeçalho.
+<nav> = Menu de navegação.
+<main> = Conteúdo principal.
+<section> = Seção temática.
+<article> = Conteúdo independente.
+<aside> = Conteúdo complementar.
+<footer> = Rodapé.
+<div> = Divisão genérica sem significado semântico próprio.
+<span> = Agrupamento genérico em linha.
+
+EXEMPLO:
+
+<header>
+    <h1>Meu site</h1>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Assuntos</h2>
+
+        <article>
+            <h3>Primeiro artigo</h3>
+            <p>Conteúdo do artigo.</p>
+        </article>
+    </section>
+
+    <aside>
+        Conteúdo complementar.
+    </aside>
+</main>
+
+<footer>
+    <p>Todos os direitos reservados.</p>
+</footer>
+
+
+==================================================
+PARTE 2 — CSS3
+==================================================
+
+CSS = Linguagem utilizada para estilizar o HTML.
+
+Responsável por:
+- Cores.
+- Fontes.
+- Tamanhos.
+- Espaçamentos.
+- Bordas.
+- Sombras.
+- Posicionamento.
+- Responsividade.
+
+--------------------------------------------------
+1. FORMAS DE ADICIONAR CSS
+--------------------------------------------------
+
+1. CSS INLINE:
+
+O estilo é aplicado diretamente dentro da tag HTML.
+
+Exemplo:
+
+<h1 style="color: blue;">Meu título</h1>
+
+Utilizado principalmente para testes rápidos.
+
+2. CSS INTERNO:
+
+O código CSS fica dentro da tag <style>, geralmente no <head>.
+
+Exemplo:
+
+<head>
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+3. CSS EXTERNO:
+
+O CSS fica em um arquivo separado com extensão .css.
+
+No HTML:
+
+<link rel="stylesheet" href="style.css">
+
+No arquivo style.css:
+
+body {
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+VANTAGENS:
+- Melhor organização.
+- Permite reutilizar o mesmo CSS em várias páginas.
+- Facilita a manutenção do projeto.
+
+--------------------------------------------------
+2. SELETORES CSS
+--------------------------------------------------
+
+* = Seleciona todos os elementos.
+h1 = Seleciona todas as tags h1.
+#nome = Seleciona um elemento pelo ID.
+.nome = Seleciona elementos pela classe.
+div p = Seleciona todos os parágrafos dentro de div.
+div > p = Seleciona apenas os parágrafos filhos diretos de div.
+
+EXEMPLO DE ID:
+
+HTML:
+<h1 id="titulo">Meu título</h1>
+
+CSS:
+#titulo {
+    color: red;
+}
+
+EXEMPLO DE CLASS:
+
+HTML:
+<p class="destaque">Primeiro texto</p>
+<p class="destaque">Segundo texto</p>
+
+CSS:
+.destaque {
+    color: blue;
+}
+
+DIFERENÇAS:
+
+HTML id="nome" = CSS #nome.
+HTML class="nome" = CSS .nome.
+
+ID:
+Deve identificar um único elemento na página.
+
+CLASS:
+Pode ser utilizada em vários elementos.
+
+Um elemento também pode possuir várias classes.
+
+Exemplo:
+
+<p class="texto destaque">Meu texto</p>
+
+--------------------------------------------------
+3. CORES E FUNDOS
+--------------------------------------------------
+
+color = Cor do texto.
+
+Exemplo:
+color: red;
+
+background-color = Cor de fundo.
+
+Exemplo:
+background-color: lightblue;
+
+background-image = Imagem de fundo.
+
+Exemplo:
+background-image: url("imagem.jpg");
+
+GRADIENTE:
+
+background-image: linear-gradient(
+    to bottom,
+    white,
+    blue
+);
+
+Direções:
+
+to bottom = De cima para baixo.
+to top = De baixo para cima.
+to right = Da esquerda para a direita.
+to left = Da direita para a esquerda.
+
+FUNDO FIXO:
+
+background-attachment: fixed;
+
+Mantém o fundo fixo durante a rolagem da página.
+
+VARIÁVEIS CSS:
+
+As variáveis CSS permitem armazenar valores para reutilizá-los em diferentes partes do arquivo CSS.
+Por convenção, são declaradas dentro de :root, para que fiquem disponíveis globalmente.
+
+Exemplo:
+
+:root {
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+}
+
+Para utilizar uma variável, usamos var():
+
+body {
+    background-color: var(--cor0);
+}
+
+h1 {
+    color: var(--cor5);
+}
+
+OBSERVAÇÕES:
+- Os nomes das variáveis CSS começam com dois hífens (--).
+- :root representa o elemento raiz do documento HTML.
+- var(--nome-da-variavel) recupera o valor armazenado.
+- Os valores acima são apenas exemplos; você pode definir suas próprias cores e nomes.
+
+CONFIGURAÇÕES GLOBAIS:
+
+O seletor universal * seleciona todos os elementos da página. É frequentemente utilizado para aplicar configurações iniciais.
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+EXPLICAÇÃO:
+- margin: 0; remove as margens padrão.
+- padding: 0; remove os espaçamentos internos padrão.
+- box-sizing: border-box; faz com que padding e border sejam incluídos no cálculo da largura e da altura definidas.
+
+Esse conjunto é conhecido como reset básico de CSS.
+
+--------------------------------------------------
+4. BORDAS, CANTOS E SOMBRAS
+--------------------------------------------------
+
+BORDER:
+
+border: 1px solid black;
+
+Ordem:
+Espessura, estilo e cor.
+
+Estilos comuns:
+solid = Linha contínua.
+dashed = Linha tracejada.
+dotted = Linha pontilhada.
+double = Linha dupla.
+none = Sem borda.
+
+CANTOS ARREDONDADOS:
+
+border-radius: 10px;
+
+SOMBRAS:
+
+box-shadow: 5px 5px 15px black;
+
+Ordem:
+Deslocamento horizontal.
+Deslocamento vertical.
+Desfoque.
+Cor.
+
+Exemplo:
+
+box-shadow: 2px 2px 8px 1px black;
+
+OUTLINE:
+
+Cria um contorno externo ao elemento.
+
+outline: 5px dashed salmon;
+
+Diferença:
+border faz parte da caixa do elemento.
+outline fica ao redor da borda e não altera o espaço ocupado.
+
+--------------------------------------------------
+5. ESPAÇAMENTOS: PADDING E MARGIN
+--------------------------------------------------
+
+BOX MODEL (MODELO DE CAIXA):
+
+CONTENT = Conteúdo.
+PADDING = Espaço interno.
+BORDER = Borda.
+MARGIN = Espaço externo.
+
+PADDING:
+
+Controla a distância entre o conteúdo e a borda.
+
+Exemplo:
+padding: 10px;
+
+MARGIN:
+
+Controla a distância entre um elemento e outros elementos.
+
+Exemplo:
+margin: 10px;
+
+PROPRIEDADES INDIVIDUAIS:
+
+padding-top = Superior.
+padding-right = Direita.
+padding-bottom = Inferior.
+padding-left = Esquerda.
+
+A mesma lógica vale para margin.
+
+SHORTHAND (FORMA ABREVIADA):
+
+padding: 10px;
+Todos os lados.
+
+padding: 10px 20px;
+Superior/inferior e direita/esquerda.
+
+padding: 10px 20px 30px;
+Superior, horizontal e inferior.
+
+padding: 10px 20px 30px 40px;
+Superior, direita, inferior e esquerda.
+
+EXEMPLO:
+
+div {
+    padding: 10px 20px;
+    margin: 10px auto;
+}
+
+margin: auto pode centralizar horizontalmente uma caixa quando há largura definida e espaço disponível.
+
+--------------------------------------------------
+6. ALTURA, LARGURA E DISPLAY
+--------------------------------------------------
+
+height = Altura.
+width = Largura.
+
+Exemplo:
+
+height: 200px;
+width: 400px;
+
+DISPLAY:
+
+block = Elemento em bloco.
+inline = Elemento em linha.
+inline-block = Em linha, mas aceita dimensões.
+none = Esconde o elemento e remove seu espaço.
+flex = Cria um contêiner flexível.
+grid = Cria um sistema de grade.
+
+Exemplos:
+
+div {
+    display: inline-block;
+}
+
+div {
+    display: none;
+}
+
+div {
+    display: block;
+}
+
+--------------------------------------------------
+7. UNIDADES DE MEDIDA
+--------------------------------------------------
+
+MEDIDAS ABSOLUTAS:
+
+cm = Centímetros.
+mm = Milímetros.
+in = Polegadas.
+px = Pixels CSS.
+pt = Pontos.
+pc = Paicas.
+
+MEDIDAS RELATIVAS:
+
+em = Relativa ao tamanho da fonte do elemento ou contexto herdado.
+rem = Relativa ao tamanho da fonte do elemento raiz (html).
+% = Relativa à dimensão de referência da propriedade.
+vw = 1% da largura da janela.
+vh = 1% da altura da janela.
+ex = Relativa à altura-x da fonte.
+
+REFERÊNCIA:
+
+Geralmente, o navegador utiliza 16px como tamanho inicial da fonte raiz.
+
+1rem = 16px, quando a raiz está em 16px.
+2rem = 32px.
+0.5rem = 8px.
+
+O valor de em pode mudar conforme o contexto e a herança.
+
+--------------------------------------------------
+8. FONTES E TEXTOS
+--------------------------------------------------
+
+font-family = Família da fonte.
+
+Exemplo:
+font-family: Arial, sans-serif;
+
+font-size = Tamanho da fonte.
+
+Exemplo:
+font-size: 20px;
+
+font-weight = Peso da fonte.
+
+Valores:
+lighter = Mais leve.
+normal = Normal.
+bold = Negrito.
+bolder = Mais pesado.
+
+Também pode utilizar valores numéricos de 100 até 900, dependendo da fonte.
+
+font-style = Estilo da fonte.
+
+Valores:
+normal = Normal.
+italic = Itálico.
+oblique = Inclinado.
+
+text-decoration = Decoração do texto.
+
+Valores:
+none = Sem decoração.
+underline = Sublinhado.
+overline = Linha acima.
+line-through = Texto riscado.
+
+--------------------------------------------------
+9. SHORTHAND DE FONTES
+--------------------------------------------------
+
+Permite configurar várias propriedades de fonte em uma única declaração.
+
+ORDEM BÁSICA:
+
+font-style
+font-weight
+font-size
+font-family
+
+Exemplo:
+
+p {
+    font: italic bold 3em 'Work Sans', sans-serif;
+}
+
+Também pode incluir altura da linha:
+
+p {
+    font: italic bold 20px/1.5 Arial, sans-serif;
+}
+
+--------------------------------------------------
+10. FONTES EXTERNAS E BAIXADAS
+--------------------------------------------------
+
+Para utilizar fontes baixadas no computador, podemos utilizar @font-face.
+
+EXEMPLO:
+
+@font-face {
+    font-family: 'MinhaFonte';
+
+    src: url('minhafonte.ttf')
+         format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'MinhaFonte', sans-serif;
+}
+
+FORMATOS DE FONTES:
+
+TTF = TrueType.
+OTF = OpenType.
+WOFF = Web Open Font Format.
+WOFF2 = Web Open Font Format 2.
+EOT = Embedded OpenType.
+
+WOFF2 costuma ser uma ótima escolha para sites modernos.
+
+--------------------------------------------------
+11. ALINHAMENTO DE TEXTO
+--------------------------------------------------
+
+text-align = Alinhamento horizontal.
+
+Valores:
+
+left = Esquerda.
+center = Centro.
+right = Direita.
+justify = Justificado.
+
+text-indent = Recuo da primeira linha do parágrafo.
+
+É utilizada para criar um espaço no início do parágrafo, deslocando apenas a primeira linha do texto.
+
+Exemplo:
+
+p {
+    text-align: justify;
+    text-indent: 30px;
+}
+
+Nesse exemplo, a primeira linha de cada parágrafo começa 30px mais à direita.
+O valor pode ser ajustado conforme o layout, por exemplo: text-indent: 2em;
+
+--------------------------------------------------
+12. PSEUDO-CLASSES
+--------------------------------------------------
+
+Permitem aplicar estilos conforme o estado ou a posição de um elemento.
+
+:hover = Quando o mouse passa sobre o elemento.
+:active = Quando o elemento está sendo ativado.
+:visited = Link já visitado.
+:link = Link ainda não visitado.
+:focus = Elemento em foco.
+:first-child = Primeiro filho.
+:last-child = Último filho.
+
+EXEMPLO:
+
+div:hover {
+    background-color: blue;
+}
+
+--------------------------------------------------
+13. PSEUDO-ELEMENTOS
+--------------------------------------------------
+
+Permitem estilizar partes específicas ou inserir conteúdo visual.
+
+::before = Insere conteúdo antes.
+::after = Insere conteúdo depois.
+
+EXEMPLO:
+
+.especial::before {
+    content: '⏭ ';
+}
+
+.especial::after {
+    content: ' ✓';
+}
+
+DIFERENÇA:
+
+Pseudo-classe utiliza :
+Pseudo-elemento utiliza ::
+
+--------------------------------------------------
+14. SELETORES DE RELACIONAMENTO
+--------------------------------------------------
+
+A B = Seleciona descendentes.
+A > B = Seleciona filhos diretos.
+A + B = Seleciona o próximo irmão imediatamente seguinte.
+A ~ B = Seleciona os irmãos seguintes.
+
+EXEMPLO:
+
+HTML:
+
+<div>
+    <p>Parágrafo 1</p>
+
+    <section>
+        <p>Parágrafo 2</p>
+    </section>
+</div>
+
+CSS:
+
+div p {
+    color: red;
+}
+
+Seleciona todos os parágrafos dentro da div.
+
+div > p {
+    color: blue;
+}
+
+Seleciona apenas os parágrafos que são filhos diretos da div.
+
+--------------------------------------------------
+15. MARCADORES PERSONALIZADOS EM LISTAS
+--------------------------------------------------
+
+A propriedade list-style-type define o tipo de marcador utilizado em uma lista.
+
+Exemplo:
+
+ul {
+    list-style-type: square;
+}
+
+Também é possível utilizar um caractere Unicode como marcador:
+
+ul {
+    list-style-type: "\1F5F8\00A0\00A0";
+}
+
+EXPLICAÇÃO:
+- \1F5F8 representa um símbolo Unicode (☑).
+- \00A0 representa um espaço não separável.
+- Os dois espaços adicionais ajudam a separar o símbolo do texto.
+
+ATENÇÃO:
+O uso de caracteres Unicode diretamente em list-style-type pode não apresentar o mesmo resultado em todos os navegadores e fontes.
+Teste a aparência nos navegadores que pretende atender.
+
+Uma alternativa é utilizar ::before:
+
+li::before {
+    content: "☑";
+    margin-right: 8px;
+}
+
+Nesse caso, pode ser necessário remover o marcador padrão da lista:
+
+ul {
+    list-style: none;
+}
+
+--------------------------------------------------
+16. TIPOS DE CAIXAS: BLOCK E INLINE
+--------------------------------------------------
+
+BLOCK-LEVEL (BLOCO):
+
+- Normalmente começa em uma nova linha.
+- Ocupa a largura disponível por padrão.
+- Aceita largura e altura.
+
+Exemplos:
+
+<div>
+<h1>
+<p>
+<main>
+<header>
+<nav>
+<article>
+<aside>
+<footer>
+<form>
+
+INLINE-LEVEL (EM LINHA):
+
+- Não começa uma nova linha automaticamente.
+- Ocupa apenas o espaço necessário ao conteúdo.
+- Largura e altura não funcionam da mesma forma que nos elementos de bloco.
+
+Exemplos:
+
+<span>
+<a>
+<code>
+<small>
+<strong>
+<em>
+<sup>
+<label>
+<button>
+<input>
+<select>
+
+É possível alterar esses comportamentos utilizando display.
+
+--------------------------------------------------
+17. RESPONSIVIDADE
+--------------------------------------------------
+
+Responsividade = Capacidade de adaptar o site a diferentes tamanhos de tela.
+
+Media Queries:
+
+Exemplo:
+
+body {
+    font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+Nesse exemplo, quando a tela tiver até 600px de largura, o tamanho da fonte será reduzido.
+
+META VIEWPORT:
+
+Adicionar dentro do <head> do HTML:
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+Permite que o site utilize corretamente a largura da tela do dispositivo.
+
+==================================================
+PARTE 3 — EXEMPLO COMPLETO
+==================================================
+
+ARQUIVO: index.html
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Meu primeiro site</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Meu primeiro site</h1>
+
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Sobre</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Bem-vindo!</h2>
+
+            <p>
+                Este é meu primeiro site utilizando
+                <strong>HTML5</strong> e <em>CSS3</em>.
+            </p>
+
+            <img src="imagem.jpg"
+                 alt="Imagem de exemplo"
+                 width="300">
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por mim.</p>
+    </footer>
+
+</body>
+</html>
+
+
+ARQUIVO: style.css
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eeeeee;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+header {
+    background-color: #333333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px black;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+
+==================================================
+PARTE 4 — RESUMO DE CONSULTA RÁPIDA
+==================================================
+
+HTML:
+Estrutura e conteúdo do site.
+
+CSS:
+Aparência e estilização do site.
+
+PRINCIPAIS TAGS HTML:
+
+<h1> até <h6> = Títulos.
+<p> = Parágrafo.
+<hr> = Linha divisória.
+<br> = Quebra de linha.
+<strong> = Importância.
+<em> = Ênfase.
+<mark> = Destaque.
+<img> = Imagem.
+<a> = Link.
+<ol> = Lista ordenada.
+<ul> = Lista não ordenada.
+<li> = Item de lista.
+<audio> = Áudio.
+<video> = Vídeo.
+<iframe> = Incorpora conteúdo externo, como vídeos do YouTube.
+<div> = Divisão genérica.
+<span> = Agrupamento em linha.
+<header> = Cabeçalho.
+<nav> = Navegação.
+<main> = Conteúdo principal.
+<section> = Seção.
+<article> = Artigo.
+<aside> = Conteúdo complementar.
+<footer> = Rodapé.
+
+PRINCIPAIS PROPRIEDADES CSS:
+
+color = Cor do texto.
+background-color = Cor do fundo.
+background-image = Imagem de fundo.
+font-family = Família da fonte.
+font-size = Tamanho da fonte.
+font-weight = Peso da fonte.
+font-style = Estilo da fonte.
+text-align = Alinhamento do texto.
+text-indent = Recuo do texto.
+width = Largura.
+height = Altura.
+display = Comportamento de exibição.
+border = Borda.
+border-radius = Cantos arredondados.
+box-shadow = Sombra.
+outline = Contorno externo.
+padding = Espaçamento interno.
+margin = Espaçamento externo.
+box-sizing = Modelo de dimensionamento.
+linear-gradient = Gradiente.
+background-attachment = Comportamento do fundo.
+
+FIM DAS ANOTAÇÕES.

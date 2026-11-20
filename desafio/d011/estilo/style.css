@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'PassionOne';
+    src: url(../fontes/PassionOne-Bold.ttf) format('opentype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Sriracha';
+    src: url(../fontes/Sriracha-Regular.ttf) format('opentype');
+    font-weight: normal;
+}
+
+:root {
+    --fonte-titulo: 'PassionOne', sans-serif;
+    --fonte-texto: 'Sriracha', sans-serif;
+    --fonte-outras: Arial, Verdana, sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    background-color: black;
+    color: white;
+}
+
+header > h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 140px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+header > p {
+    font-family: var(--fonte-outras);
+    font-size: 15px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    background-image: url(../imagem/01.jpg);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+article {
+    background-color: white;
+}
+
+main h2 {
+    font-family: var(--fonte-texto);
+    font-weight: normal;
+    font-size: 55px;
+    max-width: 600px;
+    margin: 70px 0px 70px 30px;
+}

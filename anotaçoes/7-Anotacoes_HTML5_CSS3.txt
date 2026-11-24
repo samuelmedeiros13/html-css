@@ -411,6 +411,76 @@ EXEMPLO:
 </footer>
 
 
+
+
+
+--------------------------------------------------
+11. TABELAS HTML
+--------------------------------------------------
+
+Tabelas são utilizadas para organizar dados em linhas e colunas. Não devem ser usadas para montar o layout geral da página.
+
+HIERARQUIA DE UMA TABELA SIMPLES:
+
+<table> = Tabela.
+<tr> = Table Row — linha da tabela.
+<th> = Table Header — célula de cabeçalho.
+<td> = Table Data — célula de dados.
+
+Exemplo:
+
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+    </tr>
+    <tr>
+        <td>Ana</td>
+        <td>25</td>
+    </tr>
+</table>
+
+ESTRUTURA DE TABELAS GRANDES:
+
+<table>
+    <caption>Título da tabela</caption>
+    <thead>
+        <tr>
+            <th scope="col">Produto</th>
+            <th scope="col">Preço</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Livro</td>
+            <td>R$ 40</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>Total</td>
+            <td>R$ 40</td>
+        </tr>
+    </tfoot>
+</table>
+
+- <caption> = Legenda ou título da tabela.
+- <thead> = Agrupa o cabeçalho.
+- <tbody> = Agrupa o corpo da tabela.
+- <tfoot> = Agrupa o rodapé.
+
+ATRIBUTO SCOPE:
+
+<th scope="col"> = Indica que o cabeçalho se refere à mesma coluna.
+<th scope="row"> = Indica que o cabeçalho se refere à mesma linha.
+
+EXPANSÃO DE CÉLULAS:
+
+<td colspan="2"> = Faz a célula ocupar duas colunas.
+<td rowspan="3"> = Faz a célula ocupar três linhas.
+
+Esses atributos são usados dentro da tag <td> ou <th>.
+
 ==================================================
 PARTE 2 — CSS3
 ==================================================
@@ -546,6 +616,33 @@ background-image = Imagem de fundo.
 Exemplo:
 background-image: url("imagem.jpg");
 
+CONFIGURAÇÃO DE IMAGEM DE FUNDO:
+
+background-image: url("imagem.jpg");
+background-repeat: no-repeat;
+background-position: right bottom;
+height: 98vh;
+background-size: cover;
+background-attachment: scroll;
+
+- background-repeat: controla se a imagem será repetida.
+- background-position: define a posição da imagem.
+- height: 98vh; define uma altura equivalente a 98% da altura da janela.
+- background-size: cover; faz a imagem cobrir toda a área, podendo cortar partes dela.
+- background-attachment: scroll; faz o fundo acompanhar a rolagem normal da página.
+
+SHORTHAND — BACKGROUND:
+
+A propriedade background permite reunir várias configurações em uma única declaração.
+
+Ordem geral:
+background: color image position / size repeat attachment;
+
+Exemplo:
+background: black url("imagem.jpg") right bottom / cover no-repeat scroll;
+
+A barra / separa position de size. Os valores são opcionais, mas devem respeitar a sintaxe da propriedade.
+
 GRADIENTE:
 
 background-image: linear-gradient(
@@ -651,6 +748,13 @@ Cor.
 Exemplo:
 
 box-shadow: 2px 2px 8px 1px black;
+
+SOMBRA INTERNA:
+
+Utilize inset para fazer a sombra aparecer dentro do elemento.
+
+Exemplo:
+box-shadow: inset 6px 6px 13px 0px black;
 
 OUTLINE:
 
@@ -816,6 +920,27 @@ Valores:
 normal = Normal.
 italic = Itálico.
 oblique = Inclinado.
+
+text-transform = Controla a capitalização das letras.
+
+Valores comuns:
+uppercase = Transforma todas as letras em maiúsculas.
+lowercase = Transforma todas as letras em minúsculas.
+capitalize = Coloca a primeira letra de cada palavra em maiúscula.
+
+Exemplo:
+h1 {
+    text-transform: uppercase;
+}
+
+font-variant = Permite utilizar variantes tipográficas da fonte.
+
+Exemplo:
+h2 {
+    font-variant: small-caps;
+}
+
+small-caps = Exibe as letras em maiúsculas, mantendo as letras que já eram maiúsculas visualmente maiores.
 
 text-decoration = Decoração do texto.
 
@@ -1103,6 +1228,115 @@ Adicionar dentro do <head> do HTML:
       content="width=device-width, initial-scale=1.0">
 
 Permite que o site utilize corretamente a largura da tela do dispositivo.
+
+
+
+
+--------------------------------------------------
+18. POSICIONAMENTO E ALINHAMENTO VERTICAL
+--------------------------------------------------
+
+position: relative;
+- Mantém o elemento no fluxo normal da página.
+- Permite deslocá-lo e serve como referência para elementos posicionados com absolute.
+
+position: absolute;
+- Retira o elemento do fluxo normal.
+- Posiciona o elemento em relação ao ancestral posicionado mais próximo.
+
+CENTRALIZAÇÃO COM POSITION E TRANSFORM:
+
+Exemplo:
+
+.container {
+    position: relative;
+}
+
+.elemento {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+EXPLICAÇÃO:
+- left: 50%; posiciona a borda esquerda do elemento no meio horizontal do contêiner.
+- top: 50%; posiciona o topo do elemento no meio vertical do contêiner.
+- transform: translate(-50%, -50%); desloca o elemento metade da própria largura para a esquerda e metade da própria altura para cima.
+
+Assim, o centro do elemento fica alinhado ao centro do contêiner.
+
+--------------------------------------------------
+19. TABELAS — ESTILIZAÇÃO COM CSS
+--------------------------------------------------
+
+PROPRIEDADES BÁSICAS:
+
+table {
+    border-collapse: collapse;
+}
+
+- border-collapse: collapse; une as bordas das células adjacentes, evitando o espaço entre elas.
+- vertical-align: middle; alinha verticalmente o conteúdo ao meio da célula.
+
+SELECIONAR LINHAS ALTERNADAS:
+
+:nth-child(2n) seleciona os elementos pares (even).
+:nth-child(2n + 1) seleciona os elementos ímpares (odd).
+
+Exemplo:
+tbody tr:nth-child(2n) {
+    background-color: lightgray;
+}
+
+CABEÇALHO FIXO AO ROLAR A TABELA:
+
+table {
+    position: relative;
+}
+
+thead > tr > th {
+    position: sticky;
+    top: -1px;
+}
+
+position: sticky permite que o cabeçalho permaneça visível durante a rolagem, respeitando o contêiner de rolagem.
+
+ESTILIZAÇÃO DE COLUNAS:
+
+É possível agrupar colunas com <colgroup> e identificar uma coluna com <col>.
+
+HTML:
+<table>
+    <colgroup>
+        <col class="cnome">
+        <col class="cnumero">
+    </colgroup>
+    ...
+</table>
+
+CSS:
+col.cnome {
+    background-color: lightblue;
+}
+
+TABELA RESPONSIVA:
+
+Quando uma tabela é mais larga que a tela, coloque-a dentro de um contêiner com rolagem horizontal.
+
+HTML:
+<div id="container">
+    <table>
+        ...
+    </table>
+</div>
+
+CSS:
+#container {
+    overflow-x: auto;
+}
+
+overflow-x: auto; permite rolar horizontalmente o conteúdo quando necessário, sem alargar a página inteira.
 
 ==================================================
 PARTE 3 — EXEMPLO COMPLETO

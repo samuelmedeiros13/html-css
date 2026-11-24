@@ -51,7 +51,7 @@ th scope= "row" - Mesma linha
 
 :nth-child(2n) - (even) = par, (odd) = ímpar
 
-colar o título da tabela
+colar o título da tabelaN
 table - position: relative
 thead > tr > th - postion: sticky
 	top: -1px

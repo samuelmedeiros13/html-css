@@ -1,3 +1,75 @@
 Espaçamento no inicio do paragrafo - text-indent
 variáveis em CSS - :root {}
 exemplo - --cor0: ;
+
+imagem de fundo - background-image: url ()
+background-repeat: no-repeat;
+background-position: right bottom;
+height: 98vh;
+background-size: cover;
+background-attachment: scroll;
+
+Shorthard - background 
+color > image > position > repeat > [size] > attachment
+
+
+Alinhamento Vertical
+position: relative;
+position: absolute
+left: 50%
+top: 50%
+transform: translate (-50%, -50%)
+
+letras todas em maiúsculas - text-transform: uppercase
+letras todas em maiúsculas, com as primeiras ainda maiores
+- font-variant: small-caps
+
+box-shadow: inset 6px 6px 13px 0px black
+
+tabelas
+Hierarquia de tabelas (simples)
+TABLE = tabela
+	TABLE ROW = linha de tabela - <tr>
+		TABLE HEADER = cabeçalho de tabela
+			TABLE DATA = dado de tabela - <td>
+
+border-collapse: colapse
+vertical-align: middle
+
+Anatomia para tabela grandes
+TABLE
+	CAPTION
+	THEAD
+		TR, TD, TH
+	TBODY
+		TR, TD, TH
+	TFOOT
+		TR, TD, TH
+
+th scope= "col" - Mesma coluna
+th scope= "row" - Mesma linha
+
+:nth-child(2n) - (even) = par, (odd) = ímpar
+
+colar o título da tabela
+table - position: relative
+thead > tr > th - postion: sticky
+	top: -1px
+
+expansão célula
+td colspan="2"
+td rowspan="3"
+
+config de estilo de tabela
+col.cnome {}
+<colgroup>
+<col class="cnome">
+
+tabela responsiva
+<div id="container">
+<table>
+#container {
+	overflow-x: auto
+
+
+

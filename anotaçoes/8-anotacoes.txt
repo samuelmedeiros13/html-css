@@ -1,0 +1,1 @@
+Iframe - abre seu site externo, dentro do site atual. Mas não é compatível com todos os sites!

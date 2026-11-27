@@ -1,1 +1,26 @@
 Iframe - abre seu site externo, dentro do site atual. Mas não é compatível com todos os sites!
+
+Tamanho padrão 300x150
+scolling:"auto - yes - no"
+name="frame"
+
+sandbox="sandbox" + referrerpolicy="no-referrer" - Faz um segurança a mais, impedindo de capturar dados do iframe 
+
+sandbox="allow-same-origin allow-forms allow-scripts" - menos proteção
+
+srcdoc="" - pode colocar conteúdo de html  
+
+
+box-sizing: border-box
+
+
+::-webkit-scrollbar { - esconder a barra de scroll
+	width: 0px
+	height: 0px
+
+
+Formulários
+<form>
+input- text, submit
+<form autocomplete="off"> - desligar o auto preenchimento
+<label for="inome" <- id - identificar a palavras
